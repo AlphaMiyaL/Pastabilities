@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/TopFloorStart.unity
+    guid: ef6a2bdce481d4544ab4807fefed767a
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/TopFloorEmpty.unity
+    guid: e6f96437d849c394fae8d319237450f4
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/TopFloorEnd.unity
+    guid: adf4ebc4ece35da42b0f364e6a383daa
   m_configObjects: {}
