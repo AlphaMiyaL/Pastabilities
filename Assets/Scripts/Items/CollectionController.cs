@@ -6,7 +6,7 @@ public class CollectionController : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") {
-            PlayerController.collectedAmount++; 
+            //PlayerController.collectedAmount++; 
             Destroy(gameObject);
         }
     }
