@@ -14,7 +14,7 @@ public class PlayerController2 : MonoBehaviour{
 
     private void Update(){
         Move();
-        collectedText.text = "Items Collected: " + collectedAmount; 
+        // collectedText.text = "Items Collected: " + collectedAmount; 
     }
 
     private void Move() {

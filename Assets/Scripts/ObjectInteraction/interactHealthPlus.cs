@@ -18,11 +18,19 @@ public class interactHealthPlus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //TODO: condition to make doInteract 
         if(doInteract){
             //destroy the current object this script is attached to;
             Destroy(obj); 
-            //Increase health of player
+            //TODO: Increase health of player
         }       
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        GameObject col = other.gameObject;
+        if(col.tag == "Player"){
+            doInteract = true;
+        }
+        
     }
 }

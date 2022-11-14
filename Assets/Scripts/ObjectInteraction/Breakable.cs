@@ -9,17 +9,24 @@ public class Breakable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = 5;
         obj = this.gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //TODO : condition to damage health
         if(health <= 0){
             Destroy(obj); //destroy the current object this script is attached to;
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        GameObject col = other.gameObject;
+        if(col.tag == "Bullet"){
+            health -= 1;
+        }
+        
     }
 
 }
