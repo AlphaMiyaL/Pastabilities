@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu/HomeScreen.unity
+    guid: a7efca4dca1344643a82c84c968ff569
+  - enabled: 1
+    path: Assets/Scenes/MainMenu/OptionsScreen.unity
+    guid: c6759655bee28f74586c7fe16d7a8827
+  - enabled: 1
+    path: Assets/Scenes/MainMenu/CreditsScreen.unity
+    guid: 72740e4b8140fa547ae964efb5a27c6c
+  - enabled: 1
     path: Assets/Scenes/DungeonRooms/TopFloorStart.unity
     guid: ef6a2bdce481d4544ab4807fefed767a
   - enabled: 1
