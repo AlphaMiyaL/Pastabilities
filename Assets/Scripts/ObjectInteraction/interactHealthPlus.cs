@@ -20,6 +20,9 @@ public class interactHealthPlus : MonoBehaviour
     {
         if(doInteract){
             //destroy the current object this script is attached to;
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            PlayerStats stats = player.GetComponent<PlayerStats>();
+            stats.IncreaseHealth(6);
             Destroy(obj); 
             //TODO: Increase health of player
         }       
