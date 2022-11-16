@@ -45,6 +45,7 @@ public class RoomController : MonoBehaviour
                 foreach (Room room in loadedRooms) {
                     room.RemoveUnconnectedDoors();
                 }
+                UpdateRooms();
                 updatedRooms = true;
             }
             return;
@@ -124,8 +125,42 @@ public class RoomController : MonoBehaviour
         return loadedRooms.Find(item => item.x == x && item.y == y);
     }
 
+    public string GetRandomRoomName() {
+        string[] possibleRooms = new string[] {
+            "Empty",
+            "Basic"
+        };
+
+        return possibleRooms[Random.Range(0, possibleRooms.Length)];
+    }
+
     public void OnPlayerEnterRoom(Room room) {
         CameraController.instance.currRoom = room;
         currRoom = room;
+
+        UpdateRooms();
+    }
+
+    private void UpdateRooms() {
+        /*foreach(Room room in loadedRooms) {
+            if (currRoom != room) {
+                EnemyController[] enemies = room.getComponentsInChildren<EnemyController>();
+                if (enemies!=null) {
+                    foreach(EnemyController enemy in enemies) {
+                        enemy.notInRoom = true;
+                        Debug.Log("Not in room");
+                    }
+                }
+            }
+            else {
+                EnemyController[] enemies = room.getComponentsInChildren<EnemyController>();
+                if (enemies != null) {
+                    foreach (EnemyController enemy in enemies) {
+                        enemy.notInRoom = false;
+                        Debug.Log("In room");
+                    }
+                }
+            }
+        }*/
     }
 }

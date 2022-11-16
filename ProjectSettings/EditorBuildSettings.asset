@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/TopFloorEnd.unity
     guid: adf4ebc4ece35da42b0f364e6a383daa
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/TopFloorBasic.unity
+    guid: e15088667545c3c4b8f5a91e83d44bf9
   m_configObjects: {}
