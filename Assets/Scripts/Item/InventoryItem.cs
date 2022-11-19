@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class InventoryItem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public ItemData data {get; private set;}
+    public int stackSize {get; private set;}
+
+    public InventoryItem(ItemData reference)
     {
-        
+        data = reference;
+        AddToStack();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddToStack()
     {
-        
+        stackSize++;
+    }
+
+    public void RemoveFromStack()
+    {
+        stackSize--;
     }
 }

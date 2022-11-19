@@ -10,13 +10,13 @@ public class Inventory : MonoBehaviour
     // slots in the inventory
     public GameObject[] slots; 
 
-    private Dictonary<ItemData, InventoryItem> _itemDict;
+    private Dictionary<ItemData, InventoryItem> _itemDict;
     public List<InventoryItem> inventory {get; private set;}
 
     public void Awake()
     {
         inventory = new List<InventoryItem>();
-        _itemDict = new Dictonary<ItemData, InventoryItem>();
+        _itemDict = new Dictionary<ItemData, InventoryItem>();
     }
 
     public InventoryItem Get(ItemData reference)
