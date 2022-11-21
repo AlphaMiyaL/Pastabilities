@@ -5,6 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class HomeUIManager : MonoBehaviour
 {
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void StartGame()
     {
         // Left blank for now until first level has been established
