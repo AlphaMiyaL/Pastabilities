@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class HomeUIManager : MonoBehaviour
 {
+    private HomeUIManager instance;
     void Awake()
     {
         if (instance == null)
