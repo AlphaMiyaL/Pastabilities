@@ -138,26 +138,47 @@ public class RoomController : MonoBehaviour
         CameraController.instance.currRoom = room;
         currRoom = room;
 
+        StartCoroutine(RoomCoroutine());
+    }
+
+    public IEnumerator RoomCoroutine() {
+        yield return new WaitForSeconds(0.2f);
         UpdateRooms();
     }
 
-    private void UpdateRooms() {
-        /*foreach(Room room in loadedRooms) {
+    public void UpdateRooms() {
+        /*foreach (Room room in loadedRooms) {
             if (currRoom != room) {
                 EnemyController[] enemies = room.getComponentsInChildren<EnemyController>();
-                if (enemies!=null) {
-                    foreach(EnemyController enemy in enemies) {
+                if (enemies != null) {
+                    foreach (EnemyController enemy in enemies) {
                         enemy.notInRoom = true;
                         Debug.Log("Not in room");
+                    }
+                    foreach (Door door in room.GetComponentsInChildren<Door>()) {
+                        door.doorCollider.SetActive(false);
+                    }
+                }
+                else {
+                    foreach (Door door in room.GetComponentsInChildren<Door>()) {
+                        door.doorCollider.SetActive(false);
                     }
                 }
             }
             else {
                 EnemyController[] enemies = room.getComponentsInChildren<EnemyController>();
-                if (enemies != null) {
+                if (enemies.Length>0) {
                     foreach (EnemyController enemy in enemies) {
                         enemy.notInRoom = false;
                         Debug.Log("In room");
+                    }
+                    foreach (Door door in room.GetComponentsInChildren<Door>()) {
+                        door.doorCollider.SetActive(true);
+                    }
+                }
+                else {
+                    foreach (Door door in room.GetComponentsInChildren<Door>()) {
+                        door.doorCollider.SetActive(false);
                     }
                 }
             }
