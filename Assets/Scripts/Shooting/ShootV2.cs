@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShootV2 : MonoBehaviour
 {
     public GameObject projectile;
-    public float speed = 20;
+    public float speed = 2;
 
     void Update()
     {

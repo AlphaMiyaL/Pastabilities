@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2788762376939111929}
   - component: {fileID: 795969459126148620}
   - component: {fileID: 4947962901146318506}
+  - component: {fileID: 8588406631593953732}
   m_Layer: 0
   m_Name: pizza(temp_bullet)
   m_TagString: Bullet
@@ -120,3 +121,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8588406631593953732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536172036730236490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf2af0740f9dd647a5a937765c50bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
