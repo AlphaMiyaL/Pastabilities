@@ -1143,6 +1143,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   aggressive: 0
+  attacking: 0
+  projectile: {fileID: 8214748064515445273, guid: 4b5d4eaaa5c2e864fb6bc5c3e382128a,
+    type: 3}
 --- !u!1 &1688429965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,12 +1374,12 @@ PrefabInstance:
     - target: {fileID: 2645844829723399265, guid: 64532330085cfdc49afe27aff563835e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.81
       objectReference: {fileID: 0}
     - target: {fileID: 2645844829723399265, guid: 64532330085cfdc49afe27aff563835e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.73
       objectReference: {fileID: 0}
     - target: {fileID: 2645844829723399265, guid: 64532330085cfdc49afe27aff563835e,
         type: 3}

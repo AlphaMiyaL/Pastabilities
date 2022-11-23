@@ -19,7 +19,7 @@ public class B2Zone : MonoBehaviour
     {
         
     }
-    public void OnTriggerEnter2D(Collider2D col){
+    public void OnTriggerStay2D(Collider2D col){
         aggro = true;
         anim.SetBool("PlayerNear", true);
     }
