@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class HomeUIManager : MonoBehaviour
 {
-    private HomeUIManager instance;
+    public static HomeUIManager instance;
+
     void Awake()
     {
         if (instance == null)
@@ -42,6 +43,6 @@ public class HomeUIManager : MonoBehaviour
 
     public void ExitGame()
     {
-
+        
     }
 }
