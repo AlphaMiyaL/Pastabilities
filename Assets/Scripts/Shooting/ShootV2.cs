@@ -5,31 +5,27 @@ using UnityEngine;
 public class ShootV2 : MonoBehaviour
 {
     public GameObject projectile;
-    public float speed = 2;
+    // public GameObject hitEffect;
+    public Transform firepoint;
+    public float speed = 20f;
 
     void Update()
     {
-        LookAtMouse();
         //If left mouse button is clicked
-        if(Input.GetMouseButton(0))
+        if(Input.GetButtonDown("Fire1"))
         {
-            GameObject instProjectile = Instantiate(projectile, transform.position, transform.rotation);
-
-            Rigidbody2D proj = instProjectile.GetComponent<Rigidbody2D>();
-
-            //Object move
-            proj.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
-
-            //Destroy the projectile after 3 seconds
-            Destroy(instProjectile, 3);
-
-
+            // call shoot function
+            Shoot();
         }
     }
-    private void LookAtMouse()
+
+
+    void Shoot()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.up = mousePos;
+        GameObject bullet = Instantiate(projectile, firepoint.position, firepoint.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(firepoint.up * speed, ForceMode2D.Impulse);
+
     }
 }
 

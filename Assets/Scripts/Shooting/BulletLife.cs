@@ -16,8 +16,10 @@ public class BulletLife : MonoBehaviour
         
     }
 
-    // void OnCollisionEnter2D(Collision2D other){
-    //     GameObject t = this.gameObject;
-    //     Destroy(t);
-    // }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        //Destroy(effect, 5);
+        Destroy(gameObject);
+    }
 }

@@ -4,48 +4,42 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float walkSpeed = 15f;
+    public float walkSpeed = 5f;
     
     // to keep our 2D rigid body
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
+    public Camera cam;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        // get the rigid body component for later use
-        rb = GetComponent<Rigidbody2D>();
-    }
+    Vector2 movement;
+    Vector2 mousePosition;
 
     // Update is called once per frame
     void Update()
     {
-        // Handle player walking
-        WalkHandler();
-    }
-
-    // Make the player walk according to use input
-    void WalkHandler()
-    {
-        float moveLimiter = 0.7f;
-
-        // Distance (speed = distance / time --> distance = speed * time)
-        // float distance = walkSpeed * Time.deltaTime;
-
         // Input on x ("Horizontal")
-        float hAxis = Input.GetAxisRaw("Horizontal");
+        movement.x = Input.GetAxisRaw("Horizontal");
 
         // Input on y ("Vertical")
-        float vAxis = Input.GetAxisRaw("Vertical");
+        movement.y = Input.GetAxisRaw("Vertical");
 
-        // check for diagonal movement
-        if (hAxis != 0 && vAxis != 0)
-        {
-            // limit movement by 70% speed
-            hAxis *= moveLimiter;
-            vAxis *= moveLimiter;
-        }
+        // current position of the mouse
+        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+    }
 
+    private void FixedUpdate()
+    {
         // move the rigid body
-        rb.velocity = new Vector2(hAxis * walkSpeed, vAxis * walkSpeed);
-    } 
+        rb.MovePosition(rb.position + movement * walkSpeed * Time.fixedDeltaTime);
+
+        // the position the mouse will be looking
+        Vector2 lookDirection = mousePosition - rb.position;
+
+        // the angle where the player will be looking at
+        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
+
+        // apply the angle to the player
+        rb.rotation = angle;
+    }
+
+
 }
