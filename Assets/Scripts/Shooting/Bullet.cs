@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public int damage = 5;
+    public GameObject bulletEffect;
 
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -14,7 +15,20 @@ public class Bullet : MonoBehaviour
         {
             enemy.GetDamage(damage);
         }
-        
-        Destroy(gameObject, 1);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // bullet effect
+        GameObject effect = Instantiate(bulletEffect, transform.position, Quaternion.identity);
+
+        if (GameObject.FindGameObjectWithTag("Bullet"))
+        {
+            // bullet effect dissappears after 0.5 second.
+            Destroy(effect, 0.05f);
+
+            // destroys the bullet prefab
+            Destroy(gameObject);
+        }
     }
 }

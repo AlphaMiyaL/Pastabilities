@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e7678795d007643aa35cb0a16c0879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1536172036730236490, guid: 8e9e2b46bebe1164981143ea2ba58ad1,
+  projectile: {fileID: 1536172036730236490, guid: 18d7d2583ec8df546b82f4dac4b9896b,
     type: 3}
   firepoint: {fileID: 2914791576359173703}
   speed: 10
@@ -209,7 +209,6 @@ GameObject:
   - component: {fileID: 2645844829723399265}
   - component: {fileID: 2645844829723399264}
   - component: {fileID: 2645844829723399279}
-  - component: {fileID: 2645844829723399278}
   - component: {fileID: 2645844829723399277}
   - component: {fileID: 2645844829723399267}
   m_Layer: 0
@@ -305,22 +304,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &2645844829723399278
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2645844829723399276}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.2, y: 0.2}
-  m_Direction: 1
 --- !u!114 &2645844829723399277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8dd99cd9c1fb643ab9933004126426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
 --- !u!1 &2645844829954199690
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e7678795d007643aa35cb0a16c0879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1536172036730236490, guid: 8e9e2b46bebe1164981143ea2ba58ad1,
+  projectile: {fileID: 1536172036730236490, guid: 18d7d2583ec8df546b82f4dac4b9896b,
     type: 3}
   firepoint: {fileID: 4568582218470257548}
   speed: 10
@@ -616,7 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e7678795d007643aa35cb0a16c0879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1536172036730236490, guid: 8e9e2b46bebe1164981143ea2ba58ad1,
+  projectile: {fileID: 1536172036730236490, guid: 18d7d2583ec8df546b82f4dac4b9896b,
     type: 3}
   firepoint: {fileID: 402596161503676306}
   speed: 10
@@ -763,7 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e7678795d007643aa35cb0a16c0879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1536172036730236490, guid: 8e9e2b46bebe1164981143ea2ba58ad1,
+  projectile: {fileID: 1536172036730236490, guid: 18d7d2583ec8df546b82f4dac4b9896b,
     type: 3}
   firepoint: {fileID: 5744935187267946288}
   speed: 10
@@ -811,7 +795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e7678795d007643aa35cb0a16c0879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1536172036730236490, guid: 8e9e2b46bebe1164981143ea2ba58ad1,
+  projectile: {fileID: 1536172036730236490, guid: 18d7d2583ec8df546b82f4dac4b9896b,
     type: 3}
   firepoint: {fileID: 4862579797489345172}
   speed: 10

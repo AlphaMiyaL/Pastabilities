@@ -134,3 +134,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+  bulletEffect: {fileID: 4242812514805311838, guid: 5473ace12dc4ab54cadcb1b711a410c1,
+    type: 3}

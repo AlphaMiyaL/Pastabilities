@@ -5,7 +5,6 @@ using UnityEngine;
 public class ShootV2 : MonoBehaviour
 {
     public GameObject projectile;
-    // public GameObject hitEffect;
     public Transform firepoint;
     public float speed = 20f;
 

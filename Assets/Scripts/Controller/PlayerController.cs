@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Camera cam;
 
+    PlayerStats playerStats;
+
     Vector2 movement;
     Vector2 mousePosition;
 
@@ -41,5 +43,6 @@ public class PlayerController : MonoBehaviour
         rb.rotation = angle;
     }
 
-
+    //void OnTriggerEnter2d(Collider collider)
+    
 }

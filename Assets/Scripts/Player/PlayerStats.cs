@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour
     private int health;
     private int maxHealth;
     private int money;
+    public HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -14,7 +15,7 @@ public class PlayerStats : MonoBehaviour
         health = 20;
         maxHealth = 25;
         money = 0;
-        
+        healthBar.SetMaxHealth(health);
     }
 
     // Update is called once per frame
@@ -64,6 +65,8 @@ public class PlayerStats : MonoBehaviour
             health = 0;
             Die();
         }
+
+        healthBar.SetHealth(health);
     }
 
     public void Die(){
@@ -72,5 +75,12 @@ public class PlayerStats : MonoBehaviour
 
     //TODO somewhere. Don't Destroy on Load
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Damage(1);
+        }
 
+    }
 }
