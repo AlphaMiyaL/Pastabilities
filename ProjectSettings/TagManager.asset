@@ -17,6 +17,9 @@ TagManager:
   - PlayerHealth
   - Breakable
   - Weapon
+  - SemiShield
+  - FullShield
+  - Shield
   layers:
   - Default
   - TransparentFX
