@@ -26,5 +26,9 @@ public class ShootV2 : MonoBehaviour
         rb.AddForce(firepoint.up * speed, ForceMode2D.Impulse);
 
     }
+    public void IncreaseBulletSpeed(int num)
+    {
+        speed += num;
+    }
 }
 

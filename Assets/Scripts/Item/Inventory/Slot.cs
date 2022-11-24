@@ -20,11 +20,11 @@ public class Slot : MonoBehaviour
         }
     }
 
-    public void DeleteItem()
-    { 
+    public void DropItem()
+    {
         foreach (Transform child in transform)
         {
-            child.GetComponent<DropItem>().SpawnItem();
+            child.GetComponent<Spawn>().SpawnDroppedItem();
             GameObject.Destroy(child.gameObject);
         }
     }

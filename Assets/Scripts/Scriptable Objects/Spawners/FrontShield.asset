@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cd84581fd2be747aa267c8154e8d90, type: 3}
+  m_Name: FrontShield
+  m_EditorClassIdentifier: 
+  itemToSpawn: {fileID: 1725555425141935103, guid: b3e64c1a0db74f74781842bbfc7e3e1d,
+    type: 3}
+  minSpawn: 0
+  maxSpawn: 2

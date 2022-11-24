@@ -7,7 +7,7 @@ public class GatlingShoot : MonoBehaviour
     public GameObject projectile;
     // public GameObject hitEffect;
     public Transform firepoint;
-    public float speed = 20f;
+    public float speed = 10f;
 
     void Update()
     {
@@ -38,5 +38,10 @@ public class GatlingShoot : MonoBehaviour
         //rb2.AddForce(position2 * speed, ForceMode2D.Impulse);
         //rb3.AddForce(new Vector2(10, 10), ForceMode2D.Impulse);
         //rb3.AddForce(10, firepoint.up * speed, 0, ForceMode2D.Impulse);
+    }
+
+    public void IncreaseBulletSpeed(int num)
+    {
+        speed += num;
     }
 }

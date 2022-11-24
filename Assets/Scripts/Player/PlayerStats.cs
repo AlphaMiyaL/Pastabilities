@@ -21,7 +21,7 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        healthBar.SetHealth(health);
     }
 
     public int getHealth(){
@@ -65,8 +65,6 @@ public class PlayerStats : MonoBehaviour
             health = 0;
             Die();
         }
-
-        healthBar.SetHealth(health);
     }
 
     public void Die(){

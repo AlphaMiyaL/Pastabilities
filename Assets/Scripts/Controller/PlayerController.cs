@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float walkSpeed = 5f;
+    public float walkSpeed = 3f;
     
     // to keep our 2D rigid body
     public Rigidbody2D rb;
@@ -41,6 +41,11 @@ public class PlayerController : MonoBehaviour
 
         // apply the angle to the player
         rb.rotation = angle;
+    }
+
+    public void IncreaseWalkSpeed(int num)
+    {
+        walkSpeed += num;
     }
 
     //void OnTriggerEnter2d(Collider collider)

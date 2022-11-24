@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3cd84581fd2be747aa267c8154e8d90, type: 3}
-  m_Name: SpeedBoost
+  m_Name: CompleteShield
   m_EditorClassIdentifier: 
-  itemToSpawn: {fileID: 0}
+  itemToSpawn: {fileID: 6765948672098162934, guid: b05a659e48d6d854ebe1e47786a28e0d,
+    type: 3}
   minSpawn: 0
-  maxSpawn: 0
+  maxSpawn: 1
