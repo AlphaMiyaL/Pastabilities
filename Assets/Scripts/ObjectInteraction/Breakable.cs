@@ -6,6 +6,8 @@ public class Breakable : MonoBehaviour
 {
     public int health;
     private GameObject obj;
+    private int damage = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +26,13 @@ public class Breakable : MonoBehaviour
     {
         GameObject col = other.gameObject;
         if(col.tag == "Bullet"){
-            health -= 1;
+            health -= damage;
         }
         
     }
 
+    public void IncreaseDamage(int num)
+    {
+        damage += num;
+    }
 }

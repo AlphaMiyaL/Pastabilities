@@ -5,7 +5,15 @@ using UnityEngine;
 public class Boss1 : MonoBehaviour
 {
     public int health = 150;
-        
+
+    private GameObject obj;
+    private int damage = 5;
+
+    void Start()
+    {
+        obj = this.gameObject;
+    }
+
     void Update()
     {
         if(health < 0){
@@ -18,9 +26,14 @@ public class Boss1 : MonoBehaviour
     {
         GameObject col = collider.gameObject;
         if(col.tag == "Bullet"){
-            health -= 5;
+            health -= damage;
         }
 
+    }
+
+    public void IncreaseDamage(int num)
+    {
+        damage += num;
     }
 
     private void Die()

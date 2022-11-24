@@ -5,9 +5,15 @@ using UnityEngine;
 public class GatlingShoot : MonoBehaviour
 {
     public GameObject projectile;
-    // public GameObject hitEffect;
     public Transform firepoint;
     public float speed = 10f;
+
+/*    private GameObject obj;*/
+
+    //void Start()
+    //{
+    //    obj = this.gameObject;
+    //}
 
     void Update()
     {

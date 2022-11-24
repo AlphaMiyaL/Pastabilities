@@ -7,6 +7,13 @@ public class ShootV2 : MonoBehaviour
     public GameObject projectile;
     public Transform firepoint;
     public float speed = 20f;
+/*
+    private GameObject obj;*/
+
+    //void Start()
+    //{
+    //    obj = this.gameObject;
+    //}
 
     void Update()
     {

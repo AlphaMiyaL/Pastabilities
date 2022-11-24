@@ -9,6 +9,14 @@ TagManager:
   - Entry
   - Bullet
   - Enemy
+  - BulletSpeed
+  - PlayerSpeed
+  - CompleteShield
+  - FrontShield
+  - BulletDamage
+  - PlayerHealth
+  - Breakable
+  - Weapon
   layers:
   - Default
   - TransparentFX
