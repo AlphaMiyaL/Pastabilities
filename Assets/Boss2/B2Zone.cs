@@ -21,12 +21,19 @@ public class B2Zone : MonoBehaviour
     }
 
     public void OnTriggerStay2D(Collider2D col){
-        aggro = true;
-        anim.SetBool("PlayerNear", true);
+        if(col.CompareTag("Player")){
+            aggro = true;
+            anim.SetBool("PlayerNear", true);
+        }
+        
     }
     
     public void OnTriggerExit2D(Collider2D col){
-        aggro = false;
-        anim.SetBool("PlayerNear", false);
+        if(col.CompareTag("Player")){
+            aggro = false;
+            anim.SetBool("PlayerNear", false);
+        }
+        
+    
     }
 }

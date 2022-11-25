@@ -53,7 +53,7 @@ public class Boss2 : MonoBehaviour
     private void Attack(){
 
 
-        int ran = Random.Range(1, 2);
+        int ran = Random.Range(1, 3);
         if(ran == 1){
             CircularShot();
         }
@@ -74,7 +74,7 @@ public class Boss2 : MonoBehaviour
         float angleStep = 360f/numOfProjectiles;
         float angle = 0f;
         
-        for(int i = 0; i <= numOfProjectiles - 1; i++){
+        for(int i = 0; i < numOfProjectiles; i++){
 
             float projectileXpos = startPoint.x + Mathf.Sin((angle * Mathf.PI)/ 180) * 5f;
             float projectileYpos = startPoint.x + Mathf.Cos((angle * Mathf.PI)/ 180) * 5f;
@@ -93,7 +93,11 @@ public class Boss2 : MonoBehaviour
 
     //Shoots towards the player 
     void PinPointShot(){
-        //TODO
+        Transform target = GameObject.FindGameObjectWithTag("Player").transform;
+        Vector2 startPoint = transform.position;
+        var proj = Instantiate(projectile, startPoint, Quaternion.identity);
+        proj.GetComponent<Rigidbody2D>().velocity = new Vector2(target.position.x, target.position.y).normalized * speedOfShot;
+        Destroy(proj, 2);
     }
     IEnumerator TimeBetweenAttacks()
     {

@@ -1270,6 +1270,10 @@ MonoBehaviour:
   - {fileID: 6005992814105992706}
   - {fileID: 6005992813562436744}
   - {fileID: 6005992813946351881}
+  itemButton1: {fileID: 416061052417801389, guid: 0806b6c4462ad0348b8f09a238ff0fb7,
+    type: 3}
+  itemButton2: {fileID: 877487208350556023, guid: d5801e9aae53c874dab5825ad2ec9cdf,
+    type: 3}
 --- !u!1 &9051234383617586476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1661,6 +1665,8 @@ MonoBehaviour:
   shopPanelsSO: []
   shopPanels: []
   myBuyBtns: []
+  itemButton1: {fileID: 0}
+  itemButton2: {fileID: 0}
 --- !u!1001 &2631221848693706297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1698,10 +1704,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3865535266824527550, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430614585361964090, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
       propertyPath: m_Name
       value: Item Template
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072730099738654447, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8255543972851969078, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
@@ -1807,6 +1833,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae0d88d7a0cb7a409c97c3681afadb3, type: 3}
@@ -1888,10 +1919,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3865535266824527550, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430614585361964090, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
       propertyPath: m_Name
       value: Item Template (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072730099738654447, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8255543972851969078, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
@@ -1998,6 +2049,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae0d88d7a0cb7a409c97c3681afadb3, type: 3}
 --- !u!224 &1084774014368319248 stripped
@@ -2078,10 +2144,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3865535266824527550, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430614585361964090, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
       propertyPath: m_Name
       value: Item Template (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072730099738654447, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8255543972851969078, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
@@ -2187,6 +2273,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae0d88d7a0cb7a409c97c3681afadb3, type: 3}
@@ -2373,10 +2474,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3865535266824527550, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430614585361964090, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
       propertyPath: m_Name
       value: Item Template (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072730099738654447, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8255543972851969078, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
@@ -2482,6 +2603,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae0d88d7a0cb7a409c97c3681afadb3, type: 3}
@@ -2563,10 +2699,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3865535266824527550, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430614585361964090, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
       propertyPath: m_Name
       value: Item Template (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072730099738654447, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8255543972851969078, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
@@ -2673,6 +2829,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae0d88d7a0cb7a409c97c3681afadb3, type: 3}
 --- !u!1 &2667020987930505903 stripped
@@ -2753,10 +2924,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3865535266824527550, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430614585361964090, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
       propertyPath: m_Name
       value: Item Template (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072730099738654447, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8255543972851969078, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
@@ -2862,6 +3053,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae0d88d7a0cb7a409c97c3681afadb3, type: 3}
@@ -2943,10 +3149,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3865535266824527550, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430614585361964090, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
       propertyPath: m_Name
       value: Item Template (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072730099738654447, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8255543972851969078, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
@@ -3053,6 +3279,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae0d88d7a0cb7a409c97c3681afadb3, type: 3}
 --- !u!114 &2819228350349805212 stripped
@@ -3133,10 +3374,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3865535266824527550, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430614585361964090, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
       propertyPath: m_Name
       value: Item Template (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072730099738654447, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8255543972851969078, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
@@ -3242,6 +3503,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae0d88d7a0cb7a409c97c3681afadb3, type: 3}
@@ -3323,10 +3599,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3865535266824527550, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430614585361964090, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
       propertyPath: m_Name
       value: Item Template (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072730099738654447, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8255543972851969078, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
@@ -3433,6 +3729,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae0d88d7a0cb7a409c97c3681afadb3, type: 3}
 --- !u!114 &2819228350220953321 stripped
@@ -3513,10 +3824,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3865535266824527550, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430614585361964090, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
       propertyPath: m_Name
       value: Item Template (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072730099738654447, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8255543972851969078, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
@@ -3622,6 +3953,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae0d88d7a0cb7a409c97c3681afadb3, type: 3}
@@ -3703,10 +4049,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3865535266824527550, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430614585361964090, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
       propertyPath: m_Name
       value: Item Template (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385920387012976351, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072730099738654447, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8255543972851969078, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
         type: 3}
@@ -3812,6 +4178,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111336617762398284, guid: 8ae0d88d7a0cb7a409c97c3681afadb3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae0d88d7a0cb7a409c97c3681afadb3, type: 3}

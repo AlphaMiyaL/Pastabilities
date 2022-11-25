@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4fe7e69b11475b41a7cc7a96b493af3, type: 3}
-  m_Name: item4
+  m_Name: item1
   m_EditorClassIdentifier: 
-  title: item#4
-  desc: Desc of item 4
-  price: 4444
+  title: Nothing
+  desc: Don't know why you woulf buy this, but you do you I guess.
+  price: 10000

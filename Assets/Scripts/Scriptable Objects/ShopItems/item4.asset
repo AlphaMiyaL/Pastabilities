@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4fe7e69b11475b41a7cc7a96b493af3, type: 3}
-  m_Name: item2
+  m_Name: item4
   m_EditorClassIdentifier: 
-  title: item#2
-  desc: Desc of item 2
-  price: 2222
+  title: Blue Potion
+  desc: Purchase a Blue Potion. It will be added to your inventory.
+  price: 300

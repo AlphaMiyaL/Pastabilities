@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4fe7e69b11475b41a7cc7a96b493af3, type: 3}
-  m_Name: item5
+  m_Name: item3
   m_EditorClassIdentifier: 
-  title: item#5
-  desc: Desc of item 5
-  price: 5555
+  title: Increase Health
+  desc: Increase your health by 10+
+  price: 600
