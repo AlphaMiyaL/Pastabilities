@@ -477,6 +477,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 2645844829723399264, guid: 64532330085cfdc49afe27aff563835e,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2645844829723399264, guid: 64532330085cfdc49afe27aff563835e,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 618231169
+      objectReference: {fileID: 0}
     - target: {fileID: 2645844829723399265, guid: 64532330085cfdc49afe27aff563835e,
         type: 3}
       propertyPath: m_RootOrder
