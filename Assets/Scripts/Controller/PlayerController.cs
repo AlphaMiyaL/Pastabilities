@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     Vector2 movement;
     Vector2 mousePosition;
-
+    //
     // Update is called once per frame
     void Update()
     {
@@ -45,7 +45,4 @@ public class PlayerController : MonoBehaviour
     {
         walkSpeed += num;
     }
-
-    //void OnTriggerEnter2d(Collider collider)
-    
 }

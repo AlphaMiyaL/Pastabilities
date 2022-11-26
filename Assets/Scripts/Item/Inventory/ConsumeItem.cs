@@ -12,6 +12,7 @@ public class ConsumeItem : MonoBehaviour
     private Transform weapon;
     private Transform semiShield;
     private Transform fullShield;
+    private Transform shield;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,8 @@ public class ConsumeItem : MonoBehaviour
         breakable = GameObject.FindGameObjectWithTag("Breakable").transform;
         enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
         weapon = GameObject.FindGameObjectWithTag("Weapon").transform;
-        semiShield = GameObject.FindGameObjectWithTag("SemiShield").transform;
-        fullShield = GameObject.FindGameObjectWithTag("FullShield").transform;
+        //semiShield = GameObject.FindGameObjectWithTag("SemiShield").transform;
+        //fullShield = GameObject.Find("FullShield").GetComponent<PlayerShield>().transform;
     }
 
     public void Use()
@@ -52,17 +53,17 @@ public class ConsumeItem : MonoBehaviour
         }
         else if (item.CompareTag("CompleteShield")) // blue potion
         {
-            PlayerShield full = fullShield.GetComponentInChildren<PlayerShield>();
-            full.FullShieldActive(true);
+            PlayerStats stats = player.GetComponent<PlayerStats>();
+            stats.activateFullShield();
         }
         else // tag == "FrontShield" // green potion
         {
-            PlayerShield semi = semiShield.GetComponentInChildren<PlayerShield>();
-            semi.FullShieldActive(true);
+            PlayerStats stats = player.GetComponent<PlayerStats>();
+            stats.activateSemiShield();
         }
 
         GameObject temp = Instantiate(effect, player.position, Quaternion.identity);
-        Destroy(temp, 0.2f);
+        Destroy(temp, 0.1f);
         Destroy(gameObject);
 
     }

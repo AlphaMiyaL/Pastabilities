@@ -9,6 +9,10 @@ public class PlayerStats : MonoBehaviour
     private int money;
     public HealthBar healthBar;
 
+    public GameObject fullShield;
+    public GameObject semiShield;
+    private int shieldDamage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +20,10 @@ public class PlayerStats : MonoBehaviour
         maxHealth = 25;
         money = 0;
         healthBar.SetMaxHealth(health);
+
+        shieldDamage = 0;
+        fullShield.SetActive(false);
+        semiShield.SetActive(false);
     }
 
     // Update is called once per frame
@@ -73,12 +81,45 @@ public class PlayerStats : MonoBehaviour
 
     //TODO somewhere. Don't Destroy on Load
 
+    public void activateSemiShield()
+    {
+        semiShield.SetActive(true);
+    }
+
+    public void activateFullShield()
+    {
+        fullShield.SetActive(true);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (fullShield.activeInHierarchy)
+        {
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                shieldDamage += 1;
+                if (shieldDamage == 5)
+                {
+                    fullShield.SetActive(false);
+                    shieldDamage = 0;
+                }
+            }
+        }
+        else if (semiShield.activeInHierarchy)
+        {
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                shieldDamage += 1;
+                if (shieldDamage == 3)
+                {
+                    semiShield.SetActive(false);
+                    shieldDamage = 0;
+                }
+            }
+        }
+        else if (collision.gameObject.tag == "Enemy")
         {
             Damage(1);
         }
-
     }
 }

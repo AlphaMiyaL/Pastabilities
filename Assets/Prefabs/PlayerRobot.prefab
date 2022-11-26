@@ -311,7 +311,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2645844829723399276}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c6103dce5b8223448dc35f69cc2ff0b, type: 3}
   m_Name: 
@@ -332,6 +332,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
+  fullShield: {fileID: 0}
+  semiShield: {fileID: 0}
 --- !u!1 &2645844829954199690
 GameObject:
   m_ObjectHideFlags: 0
