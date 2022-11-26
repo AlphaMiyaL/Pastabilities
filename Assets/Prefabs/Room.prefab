@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637683921553400932}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 9.94, y: 0.076, z: 0}
-  m_LocalScale: {x: 1.1894583, y: 12.01183, z: 1}
+  m_LocalPosition: {x: 10, y: 0.076, z: 0}
+  m_LocalScale: {x: 1.0556442, y: 12.01183, z: 1}
   m_Children: []
   m_Father: {fileID: 5088921814402409511}
   m_RootOrder: 7
@@ -94,8 +94,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 463196607
-  m_SortingLayer: 0
+  m_SortingLayerID: 2134174821
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 74e93f717845e1e4dad5ffde888d91ed, type: 3}
   m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
@@ -202,8 +202,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 463196607
-  m_SortingLayer: 0
+  m_SortingLayerID: 2134174821
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 74e93f717845e1e4dad5ffde888d91ed, type: 3}
   m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
@@ -622,8 +622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 3
-  doorCollider: {fileID: 0}
-  player: {fileID: 4829621329798012610}
+  doorCollider: {fileID: 4829621329798012610}
+  player: {fileID: 0}
 --- !u!61 &5930966681672154070
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1003,8 +1003,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 463196607
-  m_SortingLayer: 0
+  m_SortingLayerID: 2134174821
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 74e93f717845e1e4dad5ffde888d91ed, type: 3}
   m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
@@ -1111,8 +1111,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 463196607
-  m_SortingLayer: 0
+  m_SortingLayerID: 2134174821
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 74e93f717845e1e4dad5ffde888d91ed, type: 3}
   m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
@@ -1184,10 +1184,10 @@ MonoBehaviour:
   height: 11
   x: 0
   y: 0
-  leftDoor: {fileID: 0}
-  rightDoor: {fileID: 0}
-  topDoor: {fileID: 0}
-  bottomDoor: {fileID: 0}
+  leftDoor: {fileID: 1398658322305743028}
+  rightDoor: {fileID: 19966925627051237}
+  topDoor: {fileID: 5607585126736195405}
+  bottomDoor: {fileID: 9093123582252121106}
   doors: []
 --- !u!61 &2837346618770836520
 BoxCollider2D:

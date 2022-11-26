@@ -128,7 +128,12 @@ public class RoomController : MonoBehaviour
     public string GetRandomRoomName() {
         string[] possibleRooms = new string[] {
             "Empty",
-            "Basic"
+            "Room1",
+            "Room2",
+            "Room3",
+            "Room5",
+            "Room6"
+            //"Basic"
         };
 
         return possibleRooms[Random.Range(0, possibleRooms.Length)];
@@ -142,14 +147,14 @@ public class RoomController : MonoBehaviour
     }
 
     public IEnumerator RoomCoroutine() {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
         UpdateRooms();
     }
 
     public void UpdateRooms() {
-        /*foreach (Room room in loadedRooms) {
+        foreach (Room room in loadedRooms) {
             if (currRoom != room) {
-                EnemyController[] enemies = room.getComponentsInChildren<EnemyController>();
+                EnemyController[] enemies = room.GetComponentsInChildren<EnemyController>();
                 if (enemies != null) {
                     foreach (EnemyController enemy in enemies) {
                         enemy.notInRoom = true;
@@ -166,8 +171,8 @@ public class RoomController : MonoBehaviour
                 }
             }
             else {
-                EnemyController[] enemies = room.getComponentsInChildren<EnemyController>();
-                if (enemies.Length>0) {
+                EnemyController[] enemies = room.GetComponentsInChildren<EnemyController>();
+                if (enemies.Length > 0) {
                     foreach (EnemyController enemy in enemies) {
                         enemy.notInRoom = false;
                         Debug.Log("In room");
@@ -182,6 +187,6 @@ public class RoomController : MonoBehaviour
                     }
                 }
             }
-        }*/
+        }
     }
 }

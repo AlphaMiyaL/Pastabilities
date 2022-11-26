@@ -22,13 +22,10 @@ public class Bullet : MonoBehaviour
         // bullet effect
         GameObject effect = Instantiate(bulletEffect, transform.position, Quaternion.identity);
 
-        if (GameObject.FindGameObjectWithTag("Bullet"))
-        {
             // bullet effect dissappears after 0.5 second.
             Destroy(effect, 0.05f);
 
             // destroys the bullet prefab
             Destroy(gameObject);
-        }
     }
 }

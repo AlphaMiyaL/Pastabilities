@@ -10,8 +10,9 @@ public class Enemy : MonoBehaviour
     {
         hp -= damage;
 
-        if( hp <= 0)
-            Die();
+        if (hp <= 0)
+            this.GetComponent<EnemyController>().Death();
+            //Die();
     }
 
     void Die()
