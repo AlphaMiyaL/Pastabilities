@@ -6,6 +6,13 @@ public class B2Zone : MonoBehaviour
 {
     Animator anim;
     public bool aggro;
+
+   [SerializeField]private GameObject movePoint1;
+
+    [SerializeField]private GameObject movePoint2;
+
+    [SerializeField]private GameObject movePoint3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +41,17 @@ public class B2Zone : MonoBehaviour
             anim.SetBool("PlayerNear", false);
         }
         
-    
+    }
+
+    //Teleports the bossZone and everything in it.
+    public void Move(){
+        GameObject t= this.gameObject;
+        Vector2 movePosition;
+        int ran = Random.Range(1, 4);
+        if(ran == 1) movePosition = movePoint1.transform.position;
+        else if(ran == 2) movePosition = movePoint2.transform.position;
+        else movePosition = movePoint2.transform.position;
+        if( movePosition != null) t.transform.position = movePosition;
+
     }
 }

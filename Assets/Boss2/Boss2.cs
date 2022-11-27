@@ -11,6 +11,10 @@ public class Boss2 : MonoBehaviour
 
     public bool attacking;
 
+    [SerializeField]private GameObject shootPoint1;
+    [SerializeField]private GameObject shootPoint2;
+    [SerializeField]private GameObject shootPoint3;
+
     [SerializeField] GameObject projectile;
     float speedOfShot;
     // Start is called before the first frame update
@@ -34,9 +38,7 @@ public class Boss2 : MonoBehaviour
             attacking = true;
             Attack();
         }
-
-        
-        
+       
     }
 
     private void OnCollisionEnter2D(Collision2D other){
@@ -52,10 +54,13 @@ public class Boss2 : MonoBehaviour
 
     private void Attack(){
 
+        if(health <= 150) speedOfShot = 20f;
 
-        int ran = Random.Range(1, 3);
+        int ran = Random.Range(1, 4);
         if(ran == 1){
             CircularShot();
+        } else if(ran == 2){
+            MoveBody();
         }
         else{
             PinPointShot();
@@ -68,8 +73,7 @@ public class Boss2 : MonoBehaviour
 
     //Shoots everywhere in a circle
     void CircularShot(){
-        GameObject t = this.gameObject;
-        Vector2 startPoint = t.transform.position;
+        Vector2 startPoint = chooseShootingPoint();
         int numOfProjectiles = Random.Range(9,14);
         float angleStep = 360f/numOfProjectiles;
         float angle = 0f;
@@ -77,7 +81,7 @@ public class Boss2 : MonoBehaviour
         for(int i = 0; i < numOfProjectiles; i++){
 
             float projectileXpos = startPoint.x + Mathf.Sin((angle * Mathf.PI)/ 180) * 5f;
-            float projectileYpos = startPoint.x + Mathf.Cos((angle * Mathf.PI)/ 180) * 5f;
+            float projectileYpos = startPoint.y + Mathf.Cos((angle * Mathf.PI)/ 180) * 5f;
 
             Vector2 projectileVector = new Vector2 (projectileXpos, projectileYpos);
             Vector2 projectileMoveDirection = (projectileVector - startPoint).normalized * speedOfShot;
@@ -89,19 +93,36 @@ public class Boss2 : MonoBehaviour
         }
         
     }
+    void MoveBody(){
+        B2Zone obj = zone.GetComponent<B2Zone>();
+        obj.Move();
+    }
         
 
     //Shoots towards the player 
     void PinPointShot(){
-        Transform target = GameObject.FindGameObjectWithTag("Player").transform;
-        Vector2 startPoint = transform.position;
-        var proj = Instantiate(projectile, startPoint, Quaternion.identity);
-        proj.GetComponent<Rigidbody2D>().velocity = new Vector2(target.position.x, target.position.y).normalized * speedOfShot;
+        Vector2 target = GameObject.FindGameObjectWithTag("Player").transform.position;
+        Vector2 startPoint = chooseShootingPoint();
+        GameObject proj = Instantiate(projectile, startPoint, Quaternion.identity);
+        Vector2 direction = startPoint - target;
+        proj.GetComponent<Rigidbody2D>().velocity = target * speedOfShot;
         Destroy(proj, 2);
+    }
+
+    Vector2 chooseShootingPoint(){
+        int ran = Random.Range(1,4);
+        if(ran == 1){
+            return shootPoint1.transform.position;
+        } else if(ran == 2){
+            return shootPoint2.transform.position;
+        } else{
+            return shootPoint3.transform.position;
+        }
     }
     IEnumerator TimeBetweenAttacks()
     {
-        float rand = Random.Range(.25f,1f);
+        float rand = Random.Range(.25f,.56f);
+        if(health <= 150) rand -= .2f;
         yield return new WaitForSeconds(rand);
         attacking = false;
 

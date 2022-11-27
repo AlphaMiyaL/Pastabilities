@@ -20,19 +20,21 @@ public class ShopManager : MonoBehaviour
     public GameObject itemButton1;
     public GameObject itemButton2;
 
+    public bool inventoryFull;
+
 
 
 
     void Start()
     {
+
         player = GameObject.FindGameObjectWithTag("Player");
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         for (int i = 0; i < shopItemsSO.Length; i++)
         {
             shopPanelsSO[i].SetActive(true);
         }
-        // cash = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().getMoney();
-        cash = 100000;
+        cash = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().getMoney();
         cashUI.text = "Cash : " + cash.ToString();
         LoadPanels();
         CheckPurchasable();
@@ -44,6 +46,19 @@ public class ShopManager : MonoBehaviour
     }
 
 
+    public bool checkInventoryFull(){
+        bool full = true;
+        int notFull = 0;
+        int size = inventory.slots.Length;
+        for(int i = 0; i < size; i++){
+            if(inventory.isFull[i] == false){
+                notFull++;
+            }
+        }
+
+        if(notFull > 0) full = false;
+        return full;
+    }
 
 
     public void CheckPurchasable()
@@ -51,20 +66,14 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < shopItemsSO.Length; i++)
         {
             if(i == 3 || i == 4){
-                bool inventoryFull = true;
-                for (int j = 0; i < inventory.slots.Length; i++)
-                {
-                    if (inventory.isFull[j] == false)
-                    {
-                        inventoryFull = false;
-                    }
-                }
-                if(inventoryFull == false){
+                if(!checkInventoryFull() && cash >= shopItemsSO[i].price){
                     myBuyBtns[i].interactable = true;
+                } else{
+                    myBuyBtns[i].interactable = false;
 
                 }
             }
-            if (cash >= shopItemsSO[i].price)
+            else if (cash >= shopItemsSO[i].price)
                 myBuyBtns[i].interactable = true;
             else
                 myBuyBtns[i].interactable = false;
