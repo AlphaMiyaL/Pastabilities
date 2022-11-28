@@ -22,27 +22,30 @@ public class HomeUIManager : MonoBehaviour
 
     public void StartGame()
     {
-        // Left blank for now until first level has been established
-        // SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("TopFloorMain");
     }
 
     public void ShowHomeMenu()
     {
         SceneManager.LoadScene("HomeScreen");
+        AudioManager.instance.ButtonPress();
     }
 
     public void ShowOptionsMenu()
     {
         SceneManager.LoadScene("OptionsScreen");
+        AudioManager.instance.ButtonPress();
     }
 
     public void ShowCredits()
     {
         SceneManager.LoadScene("CreditsScreen");
+        AudioManager.instance.ButtonPress();
     }
 
     public void ExitGame()
     {
-        
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false; // allows quit functionality in editor mode
     }
 }
