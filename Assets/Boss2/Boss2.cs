@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Boss2 : MonoBehaviour
 {
+    public GameObject stairs;
     GameObject zone;
     public int health;
     private Animator anim;
@@ -45,10 +46,14 @@ public class Boss2 : MonoBehaviour
         GameObject col = other.gameObject;
         if(col.tag == "Bullet"){
             health -= 2;
+            PlayerStats p = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+            p.damageDealth += 2;
         }
 
     }
     private void Die(){
+        Vector2 t = gameObject.transform.position;
+        Instantiate(stairs, t, Quaternion.identity);
         Destroy(zone); //Destroys the object and its zone.
     }
 

@@ -6,6 +6,7 @@ public class Boss1 : MonoBehaviour
 {
     public int health = 150;
 
+    public GameObject stairs;
     private GameObject obj;
     private int damage = 5;
 
@@ -38,6 +39,8 @@ public class Boss1 : MonoBehaviour
 
     private void Die()
     {
+        Vector2 t = gameObject.transform.position;
+        Instantiate(stairs, t, Quaternion.identity);
         Destroy(this.gameObject);
     }
 }

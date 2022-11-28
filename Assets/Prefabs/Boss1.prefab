@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 150
+  stairs: {fileID: 5863914704731365475, guid: 46f96ed4f0122dc46a0e07c0f0bede80, type: 3}
 --- !u!114 &3088931779051115416
 MonoBehaviour:
   m_ObjectHideFlags: 0

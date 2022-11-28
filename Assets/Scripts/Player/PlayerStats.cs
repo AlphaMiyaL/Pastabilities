@@ -13,9 +13,15 @@ public class PlayerStats : MonoBehaviour
     public GameObject semiShield;
     private int shieldDamage;
 
+    //only for game stats purposes
+    public int damageDealth;
+    public int roomsFinished;
+
     // Start is called before the first frame update
     void Start()
     {
+        damageDealth = 0;
+        roomsFinished = 0;
         health = 20;
         maxHealth = 25;
         money = 0;

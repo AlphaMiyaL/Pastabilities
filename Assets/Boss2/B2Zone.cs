@@ -12,12 +12,20 @@ public class B2Zone : MonoBehaviour
     [SerializeField]private GameObject movePoint2;
 
     [SerializeField]private GameObject movePoint3;
+    private Vector2 m1;
+    private Vector2 m2;
+    private Vector2 m3;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
         aggro = false;
+        m1 = movePoint1.transform.position;
+        m2 = movePoint2.transform.position;
+        m3 = movePoint3.transform.position;
+
+
 
     }
 
@@ -48,9 +56,9 @@ public class B2Zone : MonoBehaviour
         GameObject t= this.gameObject;
         Vector2 movePosition;
         int ran = Random.Range(1, 4);
-        if(ran == 1) movePosition = movePoint1.transform.position;
-        else if(ran == 2) movePosition = movePoint2.transform.position;
-        else movePosition = movePoint2.transform.position;
+        if(ran == 1) movePosition = m1;
+        else if(ran == 2) movePosition = m2;
+        else movePosition = m3;
         if( movePosition != null) t.transform.position = movePosition;
 
     }
