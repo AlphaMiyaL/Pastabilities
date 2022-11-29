@@ -20,6 +20,7 @@ TagManager:
   - SemiShield
   - FullShield
   - Shield
+  - Points
   layers:
   - Default
   - TransparentFX

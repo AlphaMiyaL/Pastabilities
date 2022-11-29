@@ -39,6 +39,9 @@ public class Boss1 : MonoBehaviour
 
     private void Die()
     {
+        PointController point = GameObject.FindGameObjectWithTag("Points").GetComponent<PointController>();
+        point.points += 5000;
+
         Vector2 t = gameObject.transform.position;
         Instantiate(stairs, t, Quaternion.identity);
         Destroy(this.gameObject);

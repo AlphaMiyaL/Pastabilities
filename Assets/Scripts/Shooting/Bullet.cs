@@ -14,6 +14,8 @@ public class Bullet : MonoBehaviour
         if(enemy != null)
         {
             enemy.GetDamage(damage);
+            PointController point = GameObject.FindGameObjectWithTag("Points").GetComponent<PointController>();
+            point.points += 10;
         }
     }
 

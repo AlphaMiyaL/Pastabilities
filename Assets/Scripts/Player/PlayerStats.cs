@@ -123,9 +123,27 @@ public class PlayerStats : MonoBehaviour
                 }
             }
         }
-        else if (collision.gameObject.tag == "Enemy")
+        //else if (collision.gameObject.tag == "Enemy")
+        //{
+        //    Damage(1);
+        //}
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
         {
-            Damage(1);
+            Debug.Log("enemy damage");
+            StartCoroutine(DamageOverTime());
         }
+    }
+
+    private IEnumerator DamageOverTime()
+    {
+        //wait for two seconds
+        yield return new WaitForSeconds(0.75f);
+
+        //Deal 1 damage
+        Damage(1);
     }
 }

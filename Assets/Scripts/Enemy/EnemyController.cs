@@ -159,6 +159,17 @@ public class EnemyController : MonoBehaviour
 
     public void Death()
     {
+        PointController point = GameObject.FindGameObjectWithTag("Points").GetComponent<PointController>();
+
+        switch (enemyType) {
+            case EnemyType.Melee:
+                point.points += 100;
+                break;
+            case EnemyType.Ranged:
+                point.points += 200;
+                break;
+        }
+
         RoomController.instance.StartCoroutine(RoomController.instance.RoomCoroutine());
         Destroy(gameObject);
     }
