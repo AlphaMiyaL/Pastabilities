@@ -42,8 +42,8 @@ public class ShopManager : MonoBehaviour
 
     void Update()
     {
-        
-    }
+        cash = player.GetComponent<PlayerStats>().getMoney();    
+        }
 
 
     public bool checkInventoryFull(){

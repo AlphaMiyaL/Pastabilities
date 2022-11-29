@@ -32,7 +32,7 @@ public class Boss2 : MonoBehaviour
     void Update()
     {
         aggressive = zone.GetComponent<B2Zone>().aggro;
-        if(health < 0){
+        if(health <= 0){
                 Die();
         }
         if(aggressive && attacking == false){
@@ -45,7 +45,7 @@ public class Boss2 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other){
         GameObject col = other.gameObject;
         if(col.tag == "Bullet"){
-            health -= 2;
+            health -= col.GetComponent<Bullet>().damage;
             PlayerStats p = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
             p.damageDealth += 2;
         }
