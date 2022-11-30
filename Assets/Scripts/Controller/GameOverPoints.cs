@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameOverPoints : MonoBehaviour
 {
     public Text pointSystem;
-    //public int points;
+    public int points;
+
+    //public TextMeshProUGUI pointSystem;
 
     void Awake()
     {

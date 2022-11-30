@@ -16,6 +16,8 @@ public class PointController : MonoBehaviour
 
     private void Update()
     {
+        DontDestroyOnLoad(this);
         pointSystem.text = "PTS: " + points;
     }
+
 }
