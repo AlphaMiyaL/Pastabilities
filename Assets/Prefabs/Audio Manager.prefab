@@ -43,9 +43,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4886897573791098107, guid: 1fce990e57eef774288a174bd587410d,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: cdd7a2b7266d15e4db7c0a04b5645aae, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 22c5322ae8802544b95429402f9de47d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -142,3 +142,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: 1fce990e57eef774288a174bd587410d, type: 2}
+  buttonSFX: {fileID: 0}
+  SFX: []

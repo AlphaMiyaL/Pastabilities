@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class HomeUIManager : MonoBehaviour
 {
     public static HomeUIManager instance;
+    public AudioClip buttonPress;
 
     void Awake()
     {
@@ -28,19 +29,19 @@ public class HomeUIManager : MonoBehaviour
     public void ShowHomeMenu()
     {
         SceneManager.LoadScene("HomeScreen");
-        AudioManager.instance.ButtonPress();
+        AudioManager.instance.PlaySound(buttonPress);
     }
 
     public void ShowOptionsMenu()
     {
         SceneManager.LoadScene("OptionsScreen");
-        AudioManager.instance.ButtonPress();
+        AudioManager.instance.PlaySound(buttonPress);
     }
 
     public void ShowCredits()
     {
         SceneManager.LoadScene("CreditsScreen");
-        AudioManager.instance.ButtonPress();
+        AudioManager.instance.PlaySound(buttonPress);
     }
 
     public void ExitGame()

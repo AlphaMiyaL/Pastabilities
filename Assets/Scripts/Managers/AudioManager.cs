@@ -8,8 +8,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     [SerializeField] AudioMixer mixer;
-    [SerializeField] AudioSource buttonSFX;
-    [SerializeField] List<AudioClip> SFX = new List<AudioClip>();
+    [SerializeField] AudioSource effectsSource;
+    [SerializeField] AudioSource musicSource;
 
     public const string MASTER_KEY = "masterVolume";
     public const string MUSIC_KEY = "musicVolume";
@@ -41,8 +41,8 @@ public class AudioManager : MonoBehaviour
         mixer.SetFloat(VolumeSettings.MIXER_SFX, Mathf.Log10(sfxVolume) * 20);
     }
 
-    public void ButtonPress()
+    public void PlaySound(AudioClip clip)
     {
-        buttonSFX.PlayOneShot(SFX[0]);
+        effectsSource.PlayOneShot(clip);
     }
 }
