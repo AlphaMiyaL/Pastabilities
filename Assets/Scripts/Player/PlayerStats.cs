@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -34,7 +35,10 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthBar.SetHealth(health);
+        if(health > 0)
+            healthBar.SetHealth(health);
+        else
+            SceneManager.LoadScene("GameOverScreen");
     }
 
     public int getHealth(){

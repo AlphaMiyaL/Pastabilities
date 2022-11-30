@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -40,4 +41,13 @@ public class GameManager : MonoBehaviour
         arr[rand / n, rand - n * (rand / n)] = 3;
         return arr;
     }*/
+
+    public void GameOver()
+    {
+        Debug.Log("game over");
+        SceneManager.LoadScene("GameOverScreen");
+        
+    }
+
+
 }
