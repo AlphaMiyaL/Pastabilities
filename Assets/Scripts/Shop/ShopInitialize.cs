@@ -5,40 +5,41 @@ using UnityEngine;
 public class ShopInitialize : MonoBehaviour
 {
     [SerializeField] GameObject shopUI;
-    public bool ableToRunShop;
+    public bool currentlyOpen;
+    public bool inShop;
     // Start is called before the first frame update
     void Start()
     {
-        ableToRunShop = false;
+        currentlyOpen = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(ableToRunShop && (Input.GetKeyDown(KeyCode.E))){
+        if(currentlyOpen ==false && inShop==true && (Input.GetKeyDown(KeyCode.E))){
             InitializeUIShop();
         }
     }
     
     void OnTriggerStay2D(Collider2D col){
         if(col.gameObject.tag == "Player"){
-            ableToRunShop = true;
+            inShop = true;
         }
     }
 
     void OnTriggerExit2D(Collider2D col){
         if(col.gameObject.tag == "Player"){
-            ableToRunShop = false;
+            inShop = false;
         }
     }
     
     void InitializeUIShop(){
-        Time.timeScale = 0;
+        currentlyOpen = true;
         shopUI.SetActive(true);
     }
 
     public void ExitShop(){
-        Time.timeScale = 1;
+        currentlyOpen = false;
         shopUI.SetActive(false);
     }
 }

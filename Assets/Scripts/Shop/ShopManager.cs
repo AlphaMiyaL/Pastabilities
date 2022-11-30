@@ -8,7 +8,7 @@ using Button = UnityEngine.UI.Button;
 
 public class ShopManager : MonoBehaviour
 {
-    public int cash;
+   public int cash;
     public TMP_Text cashUI;
     public ShopItem[] shopItemsSO;
     public GameObject[] shopPanelsSO;
@@ -34,7 +34,7 @@ public class ShopManager : MonoBehaviour
         {
             shopPanelsSO[i].SetActive(true);
         }
-        cash = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().getMoney();
+        cash = player.GetComponent<PlayerStats>().getMoney();
         cashUI.text = "Cash : " + cash.ToString();
         LoadPanels();
         CheckPurchasable();
@@ -42,8 +42,9 @@ public class ShopManager : MonoBehaviour
 
     void Update()
     {
-        cash = player.GetComponent<PlayerStats>().getMoney();    
-        }
+        CheckPurchasable();
+
+    }
 
 
     public bool checkInventoryFull(){
@@ -63,6 +64,8 @@ public class ShopManager : MonoBehaviour
 
     public void CheckPurchasable()
     {
+        cash = player.GetComponent<PlayerStats>().getMoney();    
+        cashUI.text = "Cash : " + cash.ToString();
         for (int i = 0; i < shopItemsSO.Length; i++)
         {
             if(i == 3 || i == 4){
@@ -83,40 +86,38 @@ public class ShopManager : MonoBehaviour
     public void PurchaseItem(int btnNo)
     {
         if(btnNo == 0){
-            cash -= shopItemsSO[btnNo].price;
-            cashUI.text = "Cash : " + cash.ToString();
+            // cash -= shopItemsSO[btnNo].price;
+            // cashUI.text = "Cash : " + cash.ToString();
             player.GetComponent<PlayerStats>().SpendMoney(shopItemsSO[btnNo].price);
-            CheckPurchasable(); // update interactable
+            // CheckPurchasable(); // update interactable
         }
         if(btnNo == 1){
-            cash -= shopItemsSO[btnNo].price;
-            cashUI.text = "Cash : " + cash.ToString();
+            // cash -= shopItemsSO[btnNo].price;
+            // cashUI.text = "Cash : " + cash.ToString();
             player.GetComponent<PlayerStats>().SpendMoney(shopItemsSO[btnNo].price);
             player.GetComponent<PlayerStats>().gainMaxHealth(5);
             CheckPurchasable(); // update interactable
         }
         if(btnNo == 2){
-            cash -= shopItemsSO[btnNo].price;
-            cashUI.text = "Cash : " + cash.ToString();
+            // cash -= shopItemsSO[btnNo].price;
+            // cashUI.text = "Cash : " + cash.ToString();
             player.GetComponent<PlayerStats>().SpendMoney(shopItemsSO[btnNo].price);
             player.GetComponent<PlayerStats>().IncreaseHealth(10);
-            CheckPurchasable(); // update interactable
+            // CheckPurchasable(); // update interactable
         }
         if(btnNo == 3){
             PurchaseBluePotion();
-            cash -= shopItemsSO[btnNo].price;
-            cashUI.text = "Cash : " + cash.ToString();
+            // cash -= shopItemsSO[btnNo].price;
+            // cashUI.text = "Cash : " + cash.ToString();
             player.GetComponent<PlayerStats>().SpendMoney(shopItemsSO[btnNo].price);
-            player.GetComponent<PlayerStats>().IncreaseHealth(10);
-            CheckPurchasable(); // update interactable       
+            // CheckPurchasable(); // update interactable       
         }
         if(btnNo == 4){
             PurchaseOrangePotion();
-            cash -= shopItemsSO[btnNo].price;
-            cashUI.text = "Cash : " + cash.ToString();
+            // cash -= shopItemsSO[btnNo].price;
+            // cashUI.text = "Cash : " + cash.ToString();
             player.GetComponent<PlayerStats>().SpendMoney(shopItemsSO[btnNo].price);
-            player.GetComponent<PlayerStats>().IncreaseHealth(10);
-            CheckPurchasable(); // update interactable       
+            // CheckPurchasable(); // update interactable       
         }
         
         
@@ -169,12 +170,6 @@ public class ShopManager : MonoBehaviour
             shopPanels[i].priceTxt.text = shopItemsSO[i].price.ToString();
         }
     }
-    
-    
-    
-    
-    
-    
     
     
     
