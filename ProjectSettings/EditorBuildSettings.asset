@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/TopFloorRoom6.unity
     guid: a86046fd877a65841ae421c529bba4c1
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/TopFloorRoomShop.unity
+    guid: 18dca2769399e464f8a2b868d4e8515c
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/TopFloorRoom4.unity
+    guid: 4bd118ada9b03754e85e9a29e07107f6
   m_configObjects: {}

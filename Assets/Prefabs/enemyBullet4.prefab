@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 951094912077583932}
   - component: {fileID: -3733828857578266267}
   - component: {fileID: 4375839643658827691}
-  - component: {fileID: 6355980023493438121}
   m_Layer: 0
   m_Name: enemyBullet4
   m_TagString: Enemy
@@ -94,7 +93,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -112,20 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767193e9c9747604381cafecd8bb04c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 5
+  lifeTime: 7
   isEnemyBullet: 1
---- !u!114 &6355980023493438121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224694814682847699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8d75f5000387a9438dbc81cc88e61a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
-  bulletEffect: {fileID: 4242812514805311838, guid: 5473ace12dc4ab54cadcb1b711a410c1,
-    type: 3}

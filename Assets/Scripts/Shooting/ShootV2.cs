@@ -7,6 +7,7 @@ public class ShootV2 : MonoBehaviour
     public GameObject projectile;
     public Transform firepoint;
     public float speed = 20f;
+    private bool cooldown = false;
 /*
     private GameObject obj;*/
 
@@ -20,11 +21,19 @@ public class ShootV2 : MonoBehaviour
         //If left mouse button is clicked
         if(Input.GetButtonDown("Fire1"))
         {
-            // call shoot function
-            Shoot();
+            if (!cooldown) {
+                // call shoot function
+                Shoot();
+                cooldown = true;
+                StartCoroutine(Cooldown());
+            }
         }
     }
 
+    private IEnumerator Cooldown() {
+        yield return new WaitForSeconds(1.5f);
+        cooldown = false;
+    }
 
     void Shoot()
     {

@@ -47,16 +47,21 @@ public class BulletController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "Enemy" && !isEnemyBullet)
+        if(col.CompareTag("Enemy") && !isEnemyBullet)
         {
-            col.gameObject.GetComponent<EnemyController>().Death();
-            Destroy(gameObject);
+            Enemy enemy = col.GetComponent<Enemy>();
+
+            if (enemy != null) {
+                enemy.GetDamage(1);
+                PointController point = GameObject.FindGameObjectWithTag("Points").GetComponent<PointController>();
+                point.points += 10;
+            }
         }
 
-        if(col.tag == "Player" && isEnemyBullet)
+        if(col.CompareTag("Player") && isEnemyBullet)
         {
-            //GameController.DamagePlayer(1);
-            Destroy(gameObject);
+            PlayerStats player = col.GetComponent<PlayerStats>();
+            player.Damage(1);
         }
     }
 }

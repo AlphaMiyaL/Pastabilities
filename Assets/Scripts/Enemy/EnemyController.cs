@@ -134,10 +134,19 @@ public class EnemyController : MonoBehaviour
             switch(enemyType)
             {
                 case(EnemyType.Melee):
-                    //player.
+                    Follow();
                     StartCoroutine(CoolDown());
                 break;
                 case(EnemyType.Ranged):
+                    Vector3 targ = player.transform.position;
+                    targ.z = 0f;
+
+                    Vector3 objectPos = transform.position;
+                    targ.x = targ.x - objectPos.x;
+                    targ.y = targ.y - objectPos.y;
+
+                    float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg;
+                    transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
                     GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity) as GameObject;
                     bullet.GetComponent<BulletController>().GetPlayer(player.transform);
                     bullet.AddComponent<Rigidbody2D>().gravityScale = 0;

@@ -7,6 +7,7 @@ public class GatlingShoot : MonoBehaviour
     public GameObject projectile;
     public Transform firepoint;
     public float speed = 10f;
+    public bool cooldown = false;
 
 /*    private GameObject obj;*/
 
@@ -20,9 +21,18 @@ public class GatlingShoot : MonoBehaviour
         //If left mouse button is clicked
         if(Input.GetButtonDown("Fire1"))
         {
-            // call shoot function
-            Shoot();
+            if (!cooldown) {
+                // call shoot function
+                Shoot();
+                cooldown = true;
+                StartCoroutine(Cooldown());
+            }
         }
+    }
+
+    private IEnumerator Cooldown() {
+        yield return new WaitForSeconds(4f);
+        cooldown = false;
     }
 
 

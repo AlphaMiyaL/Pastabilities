@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    private int health;
-    private int maxHealth;
+    public int health;
+    public int maxHealth;
     private int money;
     public HealthBar healthBar;
 
     public GameObject fullShield;
     public GameObject semiShield;
     private int shieldDamage;
+    private bool cooldown = false;
 
     //only for game stats purposes
     public int damageDealth;
@@ -22,8 +23,6 @@ public class PlayerStats : MonoBehaviour
     {
         damageDealth = 0;
         roomsFinished = 0;
-        health = 20;
-        maxHealth = 25;
         money = 0;
         healthBar.SetMaxHealth(health);
 
@@ -131,19 +130,20 @@ public class PlayerStats : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && !cooldown)
         {
             Debug.Log("enemy damage");
+            cooldown = true;
             StartCoroutine(DamageOverTime());
         }
     }
 
     private IEnumerator DamageOverTime()
     {
-        //wait for two seconds
-        yield return new WaitForSeconds(0.75f);
-
         //Deal 1 damage
         Damage(1);
+        //wait for second
+        yield return new WaitForSeconds(0.5f);
+        cooldown = false;
     }
 }

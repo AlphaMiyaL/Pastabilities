@@ -131,8 +131,10 @@ public class RoomController : MonoBehaviour
             "Room1",
             "Room2",
             "Room3",
+            "Room4",
             "Room5",
-            "Room6"
+            "Room6",
+            "RoomShop"
             //"Basic"
         };
 

@@ -14,20 +14,16 @@ public class Bullet : MonoBehaviour
         if(enemy != null)
         {
             enemy.GetDamage(damage);
-            PointController point = GameObject.FindGameObjectWithTag("Points").GetComponent<PointController>();
-            point.points += 10;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // bullet effect
-        GameObject effect = Instantiate(bulletEffect, transform.position, Quaternion.identity);
+            // bullet effect
+            GameObject effect = Instantiate(bulletEffect, transform.position, Quaternion.identity);
 
             // bullet effect dissappears after 0.5 second.
             Destroy(effect, 0.05f);
 
             // destroys the bullet prefab
             Destroy(gameObject);
+            PointController point = GameObject.FindGameObjectWithTag("Points").GetComponent<PointController>();
+            point.points += 10;
+        }
     }
 }
