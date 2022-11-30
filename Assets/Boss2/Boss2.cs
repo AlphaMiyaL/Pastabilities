@@ -42,12 +42,12 @@ public class Boss2 : MonoBehaviour
        
     }
 
-    private void OnCollisionEnter2D(Collision2D other){
+    private void OnTriggerEnter2D(Collider2D other){
         GameObject col = other.gameObject;
         if(col.tag == "Bullet"){
             health -= col.GetComponent<Bullet>().damage;
             PlayerStats p = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
-            p.damageDealth += 2;
+            Destroy(col);
         }
 
     }

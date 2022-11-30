@@ -6,11 +6,12 @@ public class Breakable : MonoBehaviour
 {
     public int health;
     private GameObject obj;
-    private int damage = 1;
+    private int damage;
 
     // Start is called before the first frame update
     void Start()
     {
+        damage = 1;
         obj = this.gameObject;
     }
 
@@ -22,11 +23,13 @@ public class Breakable : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         GameObject col = other.gameObject;
         if(col.tag == "Bullet"){
             health -= damage;
+            Destroy(col);
+
         }
         
     }

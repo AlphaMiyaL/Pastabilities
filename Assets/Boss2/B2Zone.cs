@@ -59,7 +59,7 @@ public class B2Zone : MonoBehaviour
         if(ran == 1) movePosition = m1;
         else if(ran == 2) movePosition = m2;
         else movePosition = m3;
-        if( movePosition != null) t.transform.position = movePosition;
+        if( movePosition != null) t.transform.localPosition = movePosition;
 
     }
 }
