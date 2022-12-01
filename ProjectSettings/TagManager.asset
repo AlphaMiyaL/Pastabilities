@@ -61,6 +61,9 @@ TagManager:
   - name: Door
     uniqueID: 2134174821
     locked: 0
+  - name: Money
+    uniqueID: 1541387669
+    locked: 0
   - name: Bullet
     uniqueID: 2538793471
     locked: 0
