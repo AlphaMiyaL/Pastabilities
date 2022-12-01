@@ -1080,6 +1080,11 @@ PrefabInstance:
       propertyPath: slots.Array.data[5]
       value: 
       objectReference: {fileID: 1089616215}
+    - target: {fileID: 664076111850641989, guid: 64532330085cfdc49afe27aff563835e,
+        type: 3}
+      propertyPath: gunshotSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e7c43463c2b6ea47a6d601914973d2e, type: 3}
     - target: {fileID: 766781347353469215, guid: 64532330085cfdc49afe27aff563835e,
         type: 3}
       propertyPath: m_Layer
@@ -1090,6 +1095,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1064831457488915854, guid: 64532330085cfdc49afe27aff563835e,
+        type: 3}
+      propertyPath: gatlingShotSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e55e8e4d822660146ad836d5568f8eb8, type: 3}
     - target: {fileID: 1080982114285678642, guid: 64532330085cfdc49afe27aff563835e,
         type: 3}
       propertyPath: m_Layer
@@ -1110,6 +1120,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2380992947341051604, guid: 64532330085cfdc49afe27aff563835e,
+        type: 3}
+      propertyPath: gatlingShotSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e55e8e4d822660146ad836d5568f8eb8, type: 3}
     - target: {fileID: 2645844829723399265, guid: 64532330085cfdc49afe27aff563835e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1210,6 +1225,26 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 618231169
       objectReference: {fileID: 0}
+    - target: {fileID: 4316205706027988533, guid: 64532330085cfdc49afe27aff563835e,
+        type: 3}
+      propertyPath: gatlingShotSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e55e8e4d822660146ad836d5568f8eb8, type: 3}
+    - target: {fileID: 4868383217021955373, guid: 64532330085cfdc49afe27aff563835e,
+        type: 3}
+      propertyPath: gatlingShotSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e55e8e4d822660146ad836d5568f8eb8, type: 3}
+    - target: {fileID: 5101194031933006207, guid: 64532330085cfdc49afe27aff563835e,
+        type: 3}
+      propertyPath: gunshotSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 92937e1818e6a5642924dfea59935f99, type: 3}
+    - target: {fileID: 5289651533436712091, guid: 64532330085cfdc49afe27aff563835e,
+        type: 3}
+      propertyPath: gatlingShotSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e55e8e4d822660146ad836d5568f8eb8, type: 3}
     - target: {fileID: 5458716269055619591, guid: 64532330085cfdc49afe27aff563835e,
         type: 3}
       propertyPath: m_Layer

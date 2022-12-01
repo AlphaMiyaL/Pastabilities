@@ -15,6 +15,9 @@ public class PlayerStats : MonoBehaviour
     private int shieldDamage;
     private bool cooldown = false;
 
+    public List<AudioClip> playerHurtSFX = new List<AudioClip>();
+    public AudioClip healthUpSFX;
+
     //only for game stats purposes
     public int damageDealth;
     public int roomsFinished;
@@ -73,11 +76,13 @@ public class PlayerStats : MonoBehaviour
 
     public void IncreaseHealth(int num){
         health += num;
+        AudioManager.instance.PlaySound(healthUpSFX);
         if(health > maxHealth) health = maxHealth;
     }
 
     public void Damage(int num){
         health -= num;
+        AudioManager.instance.PlaySound(playerHurtSFX[Random.Range(0, playerHurtSFX.Count)]);
         if(health <= 0){
             health = 0;
             Die();

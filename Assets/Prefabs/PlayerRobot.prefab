@@ -169,6 +169,7 @@ MonoBehaviour:
   firepoint: {fileID: 2914791576359173703}
   speed: 10
   cooldown: 0
+  gatlingShotSFX: {fileID: 0}
 --- !u!1 &2002365137469116729
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +343,11 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   fullShield: {fileID: 6206078953000444253}
   semiShield: {fileID: 6066221221007636776}
+  playerHurtSFX:
+  - {fileID: 8300000, guid: c090ab258c602f843b9dc154de9ea39b, type: 3}
+  - {fileID: 8300000, guid: f284724cdfcd2584f85fab65e798747d, type: 3}
+  - {fileID: 8300000, guid: 3322c3c298718c947a5a2d873061ec26, type: 3}
+  healthUpSFX: {fileID: 8300000, guid: 0e212dbf4d0ddf349ae4f8fa4691c63a, type: 3}
   damageDealth: 0
   roomsFinished: 0
 --- !u!70 &1333763953
@@ -540,6 +546,7 @@ MonoBehaviour:
     type: 3}
   firepoint: {fileID: 8893590415612536025}
   speed: 10
+  gunshotSFX: {fileID: 0}
 --- !u!1 &3572824660008833982
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,6 +643,7 @@ MonoBehaviour:
   firepoint: {fileID: 4568582218470257548}
   speed: 10
   cooldown: 0
+  gatlingShotSFX: {fileID: 0}
 --- !u!1 &5653370020908824496
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +693,7 @@ MonoBehaviour:
   firepoint: {fileID: 402596161503676306}
   speed: 10
   cooldown: 0
+  gatlingShotSFX: {fileID: 0}
 --- !u!1 &5923630846503183626
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +793,7 @@ MonoBehaviour:
     type: 3}
   firepoint: {fileID: 2645844829954199691}
   speed: 10
+  gunshotSFX: {fileID: 0}
 --- !u!1 &7222198600450047338
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +843,7 @@ MonoBehaviour:
   firepoint: {fileID: 5744935187267946288}
   speed: 10
   cooldown: 0
+  gatlingShotSFX: {fileID: 0}
 --- !u!1 &7906057068031764497
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +893,7 @@ MonoBehaviour:
   firepoint: {fileID: 4862579797489345172}
   speed: 10
   cooldown: 0
+  gatlingShotSFX: {fileID: 0}
 --- !u!1 &8797927934204889490
 GameObject:
   m_ObjectHideFlags: 0

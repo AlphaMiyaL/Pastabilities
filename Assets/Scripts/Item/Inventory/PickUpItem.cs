@@ -6,6 +6,7 @@ public class PickUpItem : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject itemButton;
+    public AudioClip pickupSFX;
 
     private void Start()
     {
@@ -29,6 +30,9 @@ public class PickUpItem : MonoBehaviour
 
                     // add the item to the inventory
                     Instantiate(itemButton, inventory.slots[i].transform, false);
+
+                    // play notification sound
+                    AudioManager.instance.PlaySound(pickupSFX);
 
                     // remove the item after it is being picked
                     Destroy(gameObject);

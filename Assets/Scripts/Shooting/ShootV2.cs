@@ -7,6 +7,7 @@ public class ShootV2 : MonoBehaviour
     public GameObject projectile;
     public Transform firepoint;
     public float speed = 20f;
+    public AudioClip gunshotSFX;
     private bool cooldown = false;
 /*
     private GameObject obj;*/
@@ -23,6 +24,7 @@ public class ShootV2 : MonoBehaviour
         {
             if (!cooldown) {
                 // call shoot function
+                AudioManager.instance.PlaySound(gunshotSFX);
                 Shoot();
                 cooldown = true;
                 StartCoroutine(Cooldown());

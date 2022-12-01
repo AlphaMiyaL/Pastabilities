@@ -8,6 +8,7 @@ public class GatlingShoot : MonoBehaviour
     public Transform firepoint;
     public float speed = 10f;
     public bool cooldown = false;
+    public AudioClip gatlingShotSFX;
 
 /*    private GameObject obj;*/
 
@@ -23,6 +24,7 @@ public class GatlingShoot : MonoBehaviour
         {
             if (!cooldown) {
                 // call shoot function
+                AudioManager.instance.PlaySound(gatlingShotSFX);
                 Shoot();
                 cooldown = true;
                 StartCoroutine(Cooldown());

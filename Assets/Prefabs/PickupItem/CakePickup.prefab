@@ -113,3 +113,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 5904011952416265963, guid: b57290420077b544a89760592e29b10a,
     type: 3}
+  pickupSFX: {fileID: 8300000, guid: 0fd2480884763174d90544bc14142496, type: 3}
