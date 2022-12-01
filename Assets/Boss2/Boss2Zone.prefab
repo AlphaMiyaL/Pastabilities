@@ -247,6 +247,7 @@ MonoBehaviour:
   health: 0
   aggressive: 0
   attacking: 0
+  coin: {fileID: 1002823575082661432, guid: c641631190052274990894507a29868f, type: 3}
   shootPoint1: {fileID: 4406267493961934875}
   shootPoint2: {fileID: 4406267494695454564}
   shootPoint3: {fileID: 4406267493966235956}

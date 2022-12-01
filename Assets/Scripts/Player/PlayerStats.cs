@@ -147,7 +147,7 @@ public class PlayerStats : MonoBehaviour
         //Deal 1 damage
         Damage(1);
         //wait for second
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
         cooldown = false;
     }
 }

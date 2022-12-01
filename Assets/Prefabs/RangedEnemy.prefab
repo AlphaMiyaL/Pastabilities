@@ -156,7 +156,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 343397871
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0fb536670ade5fa42bcfb5c1546f7d55, type: 3}
   m_Color: {r: 0.9811321, g: 0.73320925, b: 0.0509078, a: 1}
@@ -229,6 +229,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
+  coin1: {fileID: 3809767017792689294, guid: c04a0cd34a5cf074db87c672a5410bb1, type: 3}
+  coin2: {fileID: 3533685110548182746, guid: ce5b44fec6a9ed749ba0efc7ef8ccd23, type: 3}
+  coin3: {fileID: 1002823575082661432, guid: c641631190052274990894507a29868f, type: 3}
   enemyHurtSFX:
   - {fileID: 8300000, guid: c239085e2c473454fa9a70914f8e2a8c, type: 3}
   - {fileID: 8300000, guid: d6877a6f5ba3843478611fa3ad0124a7, type: 3}

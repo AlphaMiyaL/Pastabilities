@@ -26,6 +26,11 @@ public class HomeUIManager : MonoBehaviour
         SceneManager.LoadScene("TopFloorMain");
     }
 
+    public void RestartGame() {
+        Debug.Log("RESTART CLICKED");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void ShowHomeMenu()
     {
         SceneManager.LoadScene("HomeScreen");

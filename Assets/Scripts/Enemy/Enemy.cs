@@ -5,6 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int hp = 25;
+    public GameObject coin1;
+    public GameObject coin2;
+    public GameObject coin3;
     public List<AudioClip> enemyHurtSFX = new List<AudioClip>();
     public AudioClip enemyDeathSFX;
 
@@ -21,12 +24,20 @@ public class Enemy : MonoBehaviour
         {
             AudioManager.instance.PlaySound(enemyDeathSFX);
             this.GetComponent<EnemyController>().Death();
-            //Die();
+            InstantateCoin();
         }
     }
-
-    void Die()
+    private void InstantateCoin()
     {
-        Destroy(gameObject);
+        int random = Random.Range(0, 20);
+        if (random < 10) {
+            Instantiate(coin1, transform.position, Quaternion.identity);
+        }
+        else if (random < 18) {
+            Instantiate(coin2, transform.position, Quaternion.identity);
+        }
+        else {
+            Instantiate(coin3, transform.position, Quaternion.identity);
+        }
     }
 }

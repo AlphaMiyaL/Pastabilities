@@ -11,6 +11,7 @@ public class Boss2 : MonoBehaviour
     public bool aggressive;
 
     public bool attacking;
+    public GameObject coin;
 
     [SerializeField]private GameObject shootPoint1;
     [SerializeField]private GameObject shootPoint2;
@@ -52,6 +53,9 @@ public class Boss2 : MonoBehaviour
 
     }
     private void Die(){
+        for (int i = 0; i < 10; i++) {
+            Instantiate(coin, transform.position, Quaternion.identity);
+        }
         Vector2 t = gameObject.transform.position;
         Instantiate(stairs, t, Quaternion.identity);
         Destroy(zone); //Destroys the object and its zone.
