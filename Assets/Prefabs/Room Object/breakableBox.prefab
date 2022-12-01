@@ -122,3 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
+  breakSFX:
+  - {fileID: 8300000, guid: 1d7f34cdf7761214abab77d7d28fc199, type: 3}
+  - {fileID: 8300000, guid: 115b7962b8edee143b8db59662c9b1b6, type: 3}

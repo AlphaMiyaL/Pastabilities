@@ -192,6 +192,9 @@ MonoBehaviour:
   notInRoom: 0
   bulletPrefab: {fileID: 1224694814682847699, guid: 5f00693f52fbcc04cbacb5d19009f9b3,
     type: 3}
+  shootSFX:
+  - {fileID: 8300000, guid: 731fbe56e89aca4468c3c219e0e2c693, type: 3}
+  - {fileID: 8300000, guid: 5b872190194e99d4e9bac70771a50688, type: 3}
 --- !u!50 &-7484104526606477095
 Rigidbody2D:
   serializedVersion: 4
@@ -226,3 +229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
+  enemyHurtSFX:
+  - {fileID: 8300000, guid: c239085e2c473454fa9a70914f8e2a8c, type: 3}
+  - {fileID: 8300000, guid: d6877a6f5ba3843478611fa3ad0124a7, type: 3}
+  - {fileID: 8300000, guid: 648b06206399220469791c6135420560, type: 3}
+  enemyDeathSFX: {fileID: 8300000, guid: 59ac705e92fc4bd499fef8f473c4492a, type: 3}

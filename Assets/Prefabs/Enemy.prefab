@@ -216,6 +216,7 @@ MonoBehaviour:
   health: 10
   notInRoom: 0
   bulletPrefab: {fileID: 0}
+  shootSFX: []
 --- !u!50 &7827936949460741507
 Rigidbody2D:
   serializedVersion: 4
@@ -250,6 +251,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
+  enemyHurtSFX:
+  - {fileID: 8300000, guid: c239085e2c473454fa9a70914f8e2a8c, type: 3}
+  - {fileID: 8300000, guid: d6877a6f5ba3843478611fa3ad0124a7, type: 3}
+  - {fileID: 8300000, guid: 648b06206399220469791c6135420560, type: 3}
+  enemyDeathSFX: {fileID: 8300000, guid: 59ac705e92fc4bd499fef8f473c4492a, type: 3}
 --- !u!1 &8336441035588291446
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class Breakable : MonoBehaviour
     public int health;
     private GameObject obj;
     private int damage;
+    public List<AudioClip> breakSFX = new List<AudioClip>();
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class Breakable : MonoBehaviour
     void Update()
     {
         if(health <= 0){
+            AudioManager.instance.PlaySound(breakSFX[Random.Range(0, breakSFX.Count)]);
             Destroy(obj); //destroy the current object this script is attached to;
         }
     }

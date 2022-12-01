@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amount: 200
+  moneyGetSFX: {fileID: 8300000, guid: 4badd97de5fd31849aae29b776aed7aa, type: 3}
 --- !u!1 &6286322047611615889
 GameObject:
   m_ObjectHideFlags: 0

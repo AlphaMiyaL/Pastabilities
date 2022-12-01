@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amount: 100
+  moneyGetSFX: {fileID: 8300000, guid: 4badd97de5fd31849aae29b776aed7aa, type: 3}
 --- !u!1 &3533685111203148516
 GameObject:
   m_ObjectHideFlags: 0

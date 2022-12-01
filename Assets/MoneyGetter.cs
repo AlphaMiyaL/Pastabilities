@@ -7,6 +7,7 @@ public class MoneyGetter : MonoBehaviour
     // Start is called before the first frame update
     private PlayerStats stats;
     public int amount;
+    public AudioClip moneyGetSFX;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class MoneyGetter : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.tag == "Player"){
             stats.GainMoney(amount);
+            AudioManager.instance.PlaySound(moneyGetSFX);
             Destroy(this.gameObject);
         }
     

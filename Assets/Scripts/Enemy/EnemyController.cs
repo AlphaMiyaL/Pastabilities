@@ -35,6 +35,7 @@ public class EnemyController : MonoBehaviour
     public bool notInRoom = false;
     private Vector3 randomDir;
     public GameObject bulletPrefab;
+    public List<AudioClip> shootSFX = new List<AudioClip>();
 
     // Start is called before the first frame update
     void Start()
@@ -138,6 +139,7 @@ public class EnemyController : MonoBehaviour
                     StartCoroutine(CoolDown());
                 break;
                 case(EnemyType.Ranged):
+                    AudioManager.instance.PlaySound(shootSFX[Random.Range(0, shootSFX.Count)]);
                     Vector3 targ = player.transform.position;
                     targ.z = 0f;
 
