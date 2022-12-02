@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioMixer mixer;
     [SerializeField] AudioSource effectsSource;
     [SerializeField] AudioSource musicSource;
+    [SerializeField] AudioClip mainMenuMusic, gameplayMusic;
 
     public const string MASTER_KEY = "masterVolume";
     public const string MUSIC_KEY = "musicVolume";
@@ -28,6 +30,21 @@ public class AudioManager : MonoBehaviour
         }
 
         LoadVolume();
+        musicSource.loop = true;
+        string sceneName = SceneManager.GetActiveScene().name;
+        switch (sceneName)
+        {
+            case "HomeScreen":
+            case "OptionsScreen":
+            case "CreditsScreen":
+                PlayMainMenuMusic();
+                break;
+            case "GameOverScreen":
+                break;
+            default:
+                PlayGameplayMusic();
+                break;
+        }
     }
 
     void LoadVolume() // volume is saved in VolumeSettings.cs
@@ -44,5 +61,22 @@ public class AudioManager : MonoBehaviour
     public void PlaySound(AudioClip clip)
     {
         effectsSource.PlayOneShot(clip);
+    }
+
+    public void PlayMainMenuMusic()
+    {
+        musicSource.clip = mainMenuMusic;
+        musicSource.Play();
+    }
+
+    public void PlayGameplayMusic()
+    {
+        musicSource.clip = gameplayMusic;
+        musicSource.Play();
+    }
+
+    public void StopMusic()
+    {
+        musicSource.Stop();
     }
 }

@@ -158,3 +158,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 2625296111822767534, guid: 612c4f64732b32c4f957e5838ae446d1, type: 3}
   item: {fileID: 6046267943157242040, guid: 90d5ea0a4c4b95d479cbd6862d91371e, type: 3}
+  speedSFX: {fileID: 8300000, guid: ec98a14b701a8934baeab35872e7c988, type: 3}
+  bulletSpeedSFX: {fileID: 8300000, guid: 3f5aa2d0881e5bc4dbb4da0401afd193, type: 3}
+  bulletDamageSFX: {fileID: 8300000, guid: 6033a78edd6ce384dbeea7940601a118, type: 3}
+  fullShieldSFX: {fileID: 8300000, guid: ce28bae2f26e1fe40bdfbf16b95967ac, type: 3}
+  semiShieldSFX: {fileID: 8300000, guid: d41bdbaf12909574cae2696415911435, type: 3}

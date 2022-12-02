@@ -7,6 +7,7 @@ public class HomeUIManager : MonoBehaviour
 {
     public static HomeUIManager instance;
     public AudioClip buttonPress;
+    public AudioClip music;
 
     void Awake()
     {
@@ -24,6 +25,7 @@ public class HomeUIManager : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("TopFloorMain");
+        AudioManager.instance.PlayGameplayMusic();
     }
 
     public void RestartGame() {
@@ -34,6 +36,13 @@ public class HomeUIManager : MonoBehaviour
     public void ShowHomeMenu()
     {
         SceneManager.LoadScene("HomeScreen");
+        AudioManager.instance.PlaySound(buttonPress);
+    }
+
+    public void ReturnFromGameOver()
+    {
+        SceneManager.LoadScene("HomeScreen");
+        AudioManager.instance.PlayMainMenuMusic();
         AudioManager.instance.PlaySound(buttonPress);
     }
 

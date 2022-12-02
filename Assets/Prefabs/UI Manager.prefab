@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonPress: {fileID: 8300000, guid: b92e5381a2ba83945a1584404fa45d2c, type: 3}
+  music: {fileID: 8300000, guid: 22c5322ae8802544b95429402f9de47d, type: 3}

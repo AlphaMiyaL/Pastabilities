@@ -906,6 +906,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9051234383389520883, guid: 7df2ce99891553648a1ecb26cd6f2dce,
+        type: 3}
+      propertyPath: buySFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 38d9762db548f494c894daede37c1b8e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7df2ce99891553648a1ecb26cd6f2dce, type: 3}
 --- !u!4 &9051234382175938068 stripped

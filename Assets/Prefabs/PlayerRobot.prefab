@@ -277,7 +277,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 618231169
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 203720397c4e0f54cb557f60883cc167, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -347,7 +347,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c090ab258c602f843b9dc154de9ea39b, type: 3}
   - {fileID: 8300000, guid: f284724cdfcd2584f85fab65e798747d, type: 3}
   - {fileID: 8300000, guid: 3322c3c298718c947a5a2d873061ec26, type: 3}
+  playerDeathSFX: {fileID: 8300000, guid: c12ac85e20c1c924e89ceca91484db5d, type: 3}
   healthUpSFX: {fileID: 8300000, guid: 0e212dbf4d0ddf349ae4f8fa4691c63a, type: 3}
+  shieldDepleted: {fileID: 8300000, guid: 7a33c898b423b894691367b4e0024ac2, type: 3}
   damageDealth: 0
   roomsFinished: 0
 --- !u!70 &1333763953

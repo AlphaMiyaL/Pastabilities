@@ -203,6 +203,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 808171661}
     m_Modifications:
+    - target: {fileID: 4406267493961934848, guid: 4dd06fda2c2364349abbd21af91b095a,
+        type: 3}
+      propertyPath: bossDeathSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ac3b00a7cc0037459c9adddc1300b27, type: 3}
+    - target: {fileID: 4406267493961934848, guid: 4dd06fda2c2364349abbd21af91b095a,
+        type: 3}
+      propertyPath: attackSFX.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406267493961934848, guid: 4dd06fda2c2364349abbd21af91b095a,
+        type: 3}
+      propertyPath: attackSFX.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: da35dcd69ea07a24a882df8aa3e3d292, type: 3}
+    - target: {fileID: 4406267493961934848, guid: 4dd06fda2c2364349abbd21af91b095a,
+        type: 3}
+      propertyPath: attackSFX.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ab79b57800060e944a50d84d8f643592, type: 3}
     - target: {fileID: 4406267494277149858, guid: 4dd06fda2c2364349abbd21af91b095a,
         type: 3}
       propertyPath: m_Name

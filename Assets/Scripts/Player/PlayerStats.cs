@@ -17,6 +17,7 @@ public class PlayerStats : MonoBehaviour
 
     public List<AudioClip> playerHurtSFX = new List<AudioClip>();
     public AudioClip healthUpSFX;
+    public AudioClip shieldDepleted;
 
     //only for game stats purposes
     public int damageDealth;
@@ -38,10 +39,13 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(health > 0)
+        if (health > 0)
             healthBar.SetHealth(health);
         else
+        {
+            AudioManager.instance.StopMusic();
             SceneManager.LoadScene("GameOverScreen");
+        }
     }
 
     public int getHealth(){
@@ -85,6 +89,7 @@ public class PlayerStats : MonoBehaviour
         AudioManager.instance.PlaySound(playerHurtSFX[Random.Range(0, playerHurtSFX.Count)]);
         if(health <= 0){
             health = 0;
+            
             Die();
         }
     }
@@ -114,6 +119,7 @@ public class PlayerStats : MonoBehaviour
                 shieldDamage += 1;
                 if (shieldDamage == 5)
                 {
+                    AudioManager.instance.PlaySound(shieldDepleted);
                     fullShield.SetActive(false);
                     shieldDamage = 0;
                 }
@@ -126,6 +132,7 @@ public class PlayerStats : MonoBehaviour
                 shieldDamage += 1;
                 if (shieldDamage == 3)
                 {
+                    AudioManager.instance.PlaySound(shieldDepleted);
                     semiShield.SetActive(false);
                     shieldDamage = 0;
                 }

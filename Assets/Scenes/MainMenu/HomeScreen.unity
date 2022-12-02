@@ -1589,17 +1589,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8940603456581092973, guid: 561b2719924403e4f92d3db3856a3792,
-        type: 3}
-      propertyPath: m_Volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8940603456581092973, guid: 561b2719924403e4f92d3db3856a3792,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 22c5322ae8802544b95429402f9de47d, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 561b2719924403e4f92d3db3856a3792, type: 3}
 --- !u!1 &1856474014
 GameObject:
@@ -1796,5 +1787,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7892682258911345277, guid: 8a4b8ad80e5b1bf409db912c563abe0f,
+        type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 8300000, guid: 22c5322ae8802544b95429402f9de47d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a4b8ad80e5b1bf409db912c563abe0f, type: 3}

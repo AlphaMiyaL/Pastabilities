@@ -13,6 +13,9 @@ public class Boss2 : MonoBehaviour
     public bool attacking;
     public GameObject coin;
 
+    public List<AudioClip> attackSFX = new List<AudioClip>();
+    public AudioClip bossDeathSFX;
+
     [SerializeField]private GameObject shootPoint1;
     [SerializeField]private GameObject shootPoint2;
     [SerializeField]private GameObject shootPoint3;
@@ -58,6 +61,7 @@ public class Boss2 : MonoBehaviour
         }
         Vector2 t = gameObject.transform.position;
         Instantiate(stairs, t, Quaternion.identity);
+        AudioManager.instance.PlaySound(bossDeathSFX);
         Destroy(zone); //Destroys the object and its zone.
     }
 
@@ -67,6 +71,7 @@ public class Boss2 : MonoBehaviour
 
         int ran = Random.Range(1, 4);
         if(ran == 1){
+            AudioManager.instance.PlaySound(attackSFX[Random.Range(0, attackSFX.Count)]);
             CircularShot();
         } else if(ran == 2){
             MoveBody();

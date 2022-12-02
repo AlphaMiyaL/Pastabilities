@@ -14,6 +14,7 @@ public class ShopManager : MonoBehaviour
     public GameObject[] shopPanelsSO;
     public ShopTemplate[] shopPanels;
     public Button[] myBuyBtns;
+    public AudioClip buySFX;
     private Inventory inventory;
     private GameObject player;
 
@@ -88,12 +89,14 @@ public class ShopManager : MonoBehaviour
         if(btnNo == 0){
             // cash -= shopItemsSO[btnNo].price;
             // cashUI.text = "Cash : " + cash.ToString();
+            AudioManager.instance.PlaySound(buySFX);
             player.GetComponent<PlayerStats>().SpendMoney(shopItemsSO[btnNo].price);
             // CheckPurchasable(); // update interactable
         }
         if(btnNo == 1){
             // cash -= shopItemsSO[btnNo].price;
             // cashUI.text = "Cash : " + cash.ToString();
+            AudioManager.instance.PlaySound(buySFX);
             player.GetComponent<PlayerStats>().SpendMoney(shopItemsSO[btnNo].price);
             player.GetComponent<PlayerStats>().gainMaxHealth(5);
             CheckPurchasable(); // update interactable
@@ -101,6 +104,7 @@ public class ShopManager : MonoBehaviour
         if(btnNo == 2){
             // cash -= shopItemsSO[btnNo].price;
             // cashUI.text = "Cash : " + cash.ToString();
+            AudioManager.instance.PlaySound(buySFX);
             player.GetComponent<PlayerStats>().SpendMoney(shopItemsSO[btnNo].price);
             player.GetComponent<PlayerStats>().IncreaseHealth(10);
             // CheckPurchasable(); // update interactable
@@ -109,6 +113,7 @@ public class ShopManager : MonoBehaviour
             PurchaseBluePotion();
             // cash -= shopItemsSO[btnNo].price;
             // cashUI.text = "Cash : " + cash.ToString();
+            AudioManager.instance.PlaySound(buySFX);
             player.GetComponent<PlayerStats>().SpendMoney(shopItemsSO[btnNo].price);
             // CheckPurchasable(); // update interactable       
         }
@@ -116,6 +121,7 @@ public class ShopManager : MonoBehaviour
             PurchaseOrangePotion();
             // cash -= shopItemsSO[btnNo].price;
             // cashUI.text = "Cash : " + cash.ToString();
+            AudioManager.instance.PlaySound(buySFX);
             player.GetComponent<PlayerStats>().SpendMoney(shopItemsSO[btnNo].price);
             // CheckPurchasable(); // update interactable       
         }
