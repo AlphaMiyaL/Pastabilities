@@ -50,6 +50,7 @@ public class PauseMenu : MonoBehaviour
     public void MainMenu()
     {
         Time.timeScale = 1f;
+        AudioManager.instance.PlayMainMenuMusic();
         SceneManager.LoadScene("HomeScreen");
     }
 
